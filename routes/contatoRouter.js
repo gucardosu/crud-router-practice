@@ -1,8 +1,10 @@
 import { Router } from "express";
 import * as controller from "../controller/contatoController.js";
 
-const router = Router();
+const routerContatos = Router();
 
-app.get("/contatos", controller.listar);
-app.get("/contatos/:id", controller.buscarPorID);
-app.post("/contatos", controller.criarContato);
+routerContatos.get("/contatos", controller.listar);
+routerContatos.get("/contatos/:id", controller.buscarPorID);
+routerContatos.post("/contatos", controller.criarContato);
+
+export default routerContatos;
