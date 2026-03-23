@@ -4,7 +4,7 @@ import routerContatos from "./routes/contatoRouter.js";
 const app = express();
 app.use(express.json());
 
-app.get("/contatos", routerContatos);
+app.use("/contatos", routerContatos);
 
 app.listen(3000, () => {
   console.log("Aplicação rodando em: http://localhost:3000");
